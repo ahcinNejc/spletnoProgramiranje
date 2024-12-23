@@ -1,0 +1,228 @@
+:root{
+    --beige: #F2EFEA;
+
+    --dark-blue: #003249;
+    --blue: #5AA9E6;
+    --light-blue: #93B5C6;
+
+
+    --dark-red: #52050A;
+    --red: #632B30;
+    --light-red: #904E55;
+
+    --yellow: #F0CF65;
+
+    --green: #DDEDAA;
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--light-blue);
+    font-family: monospace;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #F0CF65;
+}
+
+nav > a{
+    text-decoration: none;
+    color: var(--red);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+nav > a:hover{
+    background-color: var(--light-red);
+    color: var(--beige);
+    font-weight: normal;
+}
+
+
+
+
+.main{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    /* padding-top: 1rem; */
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Slider styles */
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 60%;
+    max-height: 70%;
+    overflow: hidden;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%; /* Match slider height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+.slide img {
+
+    height: 90%;
+    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    position: relative;
+
+    /* Apply blur to edges  */
+
+}
+
+
+
+
+
+
+
+/* Navigation buttons */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%;
+
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+/* Text overlay styles */
+.text-overlay {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    /* transform: translateY(-50%); */
+    color: var(--dark-red);
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 40%;
+    z-index: 1;
+}
+
+.text-overlay h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.text-overlay p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+
+/* Content cards styles */
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between text and image */
+    background-color: var(--blue);
+
+}
+
+.content-text {
+    flex: 1; /* Take up available space */
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img-container {
+    flex-shrink: 0; /* Prevent the container from shrinking */
+    width: 200px; 
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd; 
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circle while maintaining aspect ratio */
+}
+
+.content-text p{
+    font-size: 1rem;
+}
+
+
+
+
+.content-text a{
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    background-color: var(--dark-blue);
+    max-width: fit-content;
+    color: var(--beige);
+    border-radius: 1rem;
+
+}
+
+.content-text a:hover{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+
+
+
