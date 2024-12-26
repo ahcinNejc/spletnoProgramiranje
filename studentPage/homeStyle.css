@@ -1,4 +1,23 @@
 :root{
+
+    /* --primary-color: #331E38; */
+
+    --primary-light: #706993;
+
+    /* --secondary-color: #232E21;  */
+
+    --primary-light: #26547C;
+
+
+    /*  Testing blue and green */
+    /* --primary-color: #46B1C9;
+    --secondary-color: #50723C; */
+
+
+    /* Testing pink and blue */
+    --primary-color: #810a67;
+    --secondary-color: #46B1C9; 
+
     --beige: #F2EFEA;
 
     --dark-blue: #003249;
@@ -21,8 +40,9 @@ body{
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-color: var(--light-blue);
+    background-color: var(--secondary-color);
     font-family: monospace;
+    color: var(--beige);
 }
 
 nav{
@@ -32,18 +52,18 @@ nav{
     font-size: 1.5rem;
     gap: 2rem;
     padding: 1rem;
-    background-color: #F0CF65;
+    background-color: var(--primary-color);
 }
 
 nav > a{
     text-decoration: none;
-    color: var(--red);
+    color: var(--beige);
     padding: 0.5rem;
     border-radius: 0.5rem;
     font-weight: bold;
 }
 nav > a:hover{
-    background-color: var(--light-red);
+    background-color: var(--primary-light);
     color: var(--beige);
     font-weight: normal;
 }
@@ -66,6 +86,7 @@ nav > a:hover{
 /* Slider styles */
 
 .slider {
+    padding-top: 1rem;
     position: relative;
     width: 100%;
     min-height: 60%;
@@ -88,17 +109,20 @@ nav > a:hover{
     height: 100%; /* Match slider height */
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 1rem;
 }
 
 
 .slide img {
 
     height: 90%;
+    max-width: 70%;
     object-fit: contain; /* Ensure the entire image is visible without cropping */
     position: relative;
-
+    border-radius: 2rem;
     /* Apply blur to edges  */
+
 
 }
 
@@ -142,11 +166,11 @@ button:hover {
     bottom: 20%;
     left: 5%;
     /* transform: translateY(-50%); */
-    color: var(--dark-red);
+    color: var(--beige);
     padding: 10px 20px;
     border-radius: 5px;
     max-width: 40%;
-    z-index: 1;
+    z-index: 100;
 }
 
 .text-overlay h2 {
@@ -168,9 +192,13 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Space between text and image */
-    background-color: var(--blue);
-
+    margin: 1rem;
+    /* padding: 1.5rem; */
+    gap: 20px; 
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px 10px var(--primary-color);
+    border-radius: 2rem;
+    max-width: 95%;
 }
 
 .content-text {
@@ -210,7 +238,7 @@ button:hover {
     padding: 1rem;
     margin: 1rem;
     text-decoration: none;
-    background-color: var(--dark-blue);
+    background-color: var(--primary-light);
     max-width: fit-content;
     color: var(--beige);
     border-radius: 1rem;
