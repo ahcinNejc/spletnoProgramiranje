@@ -15,7 +15,103 @@
         </nav>
 
 
-        <div class="main"></div>
-    
+        <div class="main">
+            <div class="bttn-row" id="bttn-row">
+                <h2 class="title">Subjects</h2>
+                <button onclick="openSubjectModal()" id="add-subject-bttn">Add subject</button>
+                <button onclick="openQandAModal()" id="add-question-bttn">Add Question</button>
+            </div>
+            <div class="main-container" id="main-container">
+
+                <!-- Subject selection section -->
+                <div class="subject-cont ">
+                    <button class="remove-bttn">x</button>
+
+                    <h2>Subject title</h2>
+
+                    <span>Number of questions: </span>
+                    <button>Go to questions</button>
+
+  
+
+                </div>
+                <div class="subject-cont">
+                    <button class="remove-bttn">x</button>
+                    <h2>Subject title</h2>
+                    <span>Number of questions: </span>
+                    <button>Go to questions</button>
+                </div>
+
+
+
+
+                <!-- Questions section -->
+                <button class="back-button">Back to Subjects</button>
+                <h2>math Questions</h2>
+
+                <div class="questions-container">
+                    <div class="qCard">
+                        <p><strong>Question 1:</strong> What is 2 + 2?</p>
+                        <p><strong>Answer:</strong> 4</p>
+                    </div>
+                    <div class="qCard">
+                        <p><strong>Question 2:</strong> What is the square root of 16?</p>
+                        <p><strong>Answer:</strong> 4</p>
+                    </div>
+                </div>
+
+                
+
+
+
+
+
+            </div>
+
+
+
+            <!-- Modal popup section -->
+
+            <!-- Add subject modal -->
+
+            <div class="modal-frame" id="subject-modal">
+                <div class="modal-content" >
+                    <button onclick="closeSubjectModal()">x</button>
+                    <h2>Add new subject</h2>
+                    <p>Subject name:</p>
+                    <input type="text" name="subject name" id="subject-name">
+                    <button onclick="addSubject()">Confirm</button>
+                </div>
+            </div>
+
+
+
+            <!-- Add Question and answer modal -->
+            <div class="modal-frame" id="qANDa-modal">
+                <div class="modal-content" >
+                    <button onclick="closeQandAModal()">x</button>
+                    <h2>Add new Question and Answer</h2>
+                    <p>Question:</p>
+                    <input type="text" name="question" id="question-input">
+                    <p>Answer:</p>
+                    <input type="text" name="answer" id="answer-input">
+                    <button onclick="addQuestion()">Confirm</button>
+                </div>
+            </div>
+
+
+            <!-- Are you sure modal -->
+            <div class="modal-frame" id="sure-modal">
+                <div class="modal-content" >
+                    <h2>Are you sure?</h2>
+                    <button onclick="areYouSure(true)" style="float: left;">Confirm</button>
+                    <button onclick="areYouSure(false)">Cancel</button>
+
+                </div>
+            </div>
+
+
+        </div>
+    <script src="qCardsScript.js"></script>
 </body>
 </html>

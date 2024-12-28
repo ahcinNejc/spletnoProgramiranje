@@ -1,4 +1,4 @@
-// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide');
