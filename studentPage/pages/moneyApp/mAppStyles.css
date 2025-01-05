@@ -1,41 +1,22 @@
 :root{
-    /* --primary-color: #331E38; */
-    /* --primary-light: #706993;
-    --secondary-color: #232E21; */
 
-    /* --primary-color: #46B1C9; */
     /* --primary-color: #331E38; */
 
-    /* --primary-light: #706993; */
+    --primary-light: #706993;
 
-    /* --secondary-color: #50723C; */
-    /* --secondary-color: #232E21; */
+    /* --secondary-color: #232E21;  */
 
     --primary-light: #26547C;
 
 
+    /*  Testing blue and green */
+    /* --primary-color: #46B1C9;
+    --secondary-color: #50723C; */
 
 
+    /* Testing pink and blue */
     --primary-color: #810a67;
-    --secondary-color: #46B1C9;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    --secondary-color: #46B1C9; 
 
     --beige: #F2EFEA;
 
@@ -88,6 +69,10 @@ nav > a:hover{
     font-weight: normal;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 
 .main{
     box-sizing: border-box;
@@ -95,78 +80,33 @@ nav > a:hover{
     height: 100%;
     /* padding-top: 1rem; */
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
 }
 
-
-.bttn-row{
-    background-color: var(--primary-color);
+.top-row{
+    padding-top: 1rem;
     width: 80%;
-    height: 10%;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: top;
-    position: relative;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 2rem;
-    top: 10%;
-    border: 4px solid var(--primary-color);
-
+    justify-content: space-evenly;
 }
-.bttn-row button{
-    background-color: var(--secondary-color);
-    border-style: none;
-    border-radius: 2rem;
-    font-weight: bold;
-    padding: 1rem;
-    color: var(--beige);
-    max-height: 50%;
-
-    display: none; 
-    align-items: center;
-    justify-content: center;
-}
-.title{
-    padding: 0;
-    margin: 0;
-}
-.bttn-row > .active{
-    display: inline-flex;
-}
-
 
 
 .main-container{
-    z-index: 10;
     background-color: var(--secondary-color);
-    height: 80%;
+    height: fit-content;
     width: 80%;
-    border-radius: 2rem;
-
-    border: 4px solid var(--primary-color);
     padding: 1rem;
-
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+    place-items: center;
     gap: 1rem;
-    align-items: top;
-    overflow-y: auto;
-    scrollbar-width: none;
+
 }
-
-
-
-
-
-
-
-/* Subjects page styles */
-
-.subject-cont{
+.expense-cont{
     flex-grow: 1;
     flex-basis: 200;
     background-color: var(--primary-color);
@@ -175,7 +115,7 @@ nav > a:hover{
     max-width: 200px;
     max-height: fit-content;
 
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -183,19 +123,12 @@ nav > a:hover{
     gap: 1rem;
 }
 
-.active{
-    display: flex;
-}
-
-
-
-
-.subject-cont:hover{
+.expense-cont:hover{
     transform: translateY(-10px);
 }
 
 
-.subject-cont button, .show-answer-btn{
+.expense-cont button{
     max-width: fit-content;
     background-color: var(--secondary-color);
     padding: 0.5rem;
@@ -204,70 +137,17 @@ nav > a:hover{
     color: var(--beige);
     font-weight: bold;
 }
-
-
-
-.remove-bttn{
-    margin-left: auto;
-    background-color: var(--secondary-color);
-    border-style: none;
-    border-radius: 50%;
-    color: var(--primary-light);
-    padding: 0.5rem;
-    height: 2rem;
-    width: 2rem;
-    font-weight: bold;
-}
-
-.subject-cont button:hover, .show-answer-btn:hover, .remove-bttn:hover{
-    cursor: pointer;
+.expense-cont button:hover{
     background-color: var(--primary-light);
     color: var(--beige);
 }
 
-
-
-/* Questions page styles */
-
-.back-button{
-    background-color: var(--primary-light);
-    border-style: none;
-    border-radius: 1rem;
-    color: var(--beige);
-    max-height: fit-content;
-    padding: 1rem;
-}
-button:hover{
-    cursor: pointer;
-}
-.main-container > h2{
-    flex: 1 1 100%;
-    text-align: center;
-    font-size: 2rem;
-}
-.questions-container{
-    flex: 1 1 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.buttons{
+    margin-top: 1rem;
+    display: grid;
     gap: 2rem;
+    grid-template-columns: 1fr 1fr;
 }
-.qCard{
-    flex: 1 1 80%;
-    background-color: var(--primary-color);
-    padding: 1rem;
-    border-radius: 2rem;
-    max-height: fit-content;
-    min-width: 80%;
-}
-
-.answer{
-    display: none;
-}
-
-
-
-
 
 
 /* Modal style section */
@@ -291,7 +171,14 @@ button:hover{
     border: 2px solid var(--primary-light);
     border-radius: 1rem;
     padding: 1rem;
+    gap: 1rem;
 }
+
+.modal-active{
+    display: flex;
+}
+
+
 .modal-content > button{
     float: right;
     background-color: var(--primary-light);
@@ -300,22 +187,16 @@ button:hover{
     border-style: none;
     border-radius: 1rem;
 }
-
-.modal-active{
-    display: flex;
+.modal-content .buttons button{
+    background-color: var(--primary-light);
+    padding: 0.5rem;
+    border-style: none;
+    border-radius: 1rem;
+    color: var(--beige);
+    font-weight: bold;
 }
 
 
-.modal-content input[type="text"]{
-    width: 90%;
-    margin-bottom: 8px;
-    min-height: 2rem;
-    text-wrap: wrap;
-}
-
-#sure-modal{
-    text-align: center;
-}
 
 
 

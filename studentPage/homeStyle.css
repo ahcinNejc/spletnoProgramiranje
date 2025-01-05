@@ -49,6 +49,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 1.5rem;
     gap: 2rem;
     padding: 1rem;
@@ -119,7 +120,7 @@ nav > a:hover{
 
     height: 90%;
     max-width: 70%;
-    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    object-fit: cover; /* Ensure the entire image is visible without cropping */
     position: relative;
     border-radius: 2rem;
     /* Apply blur to edges  */

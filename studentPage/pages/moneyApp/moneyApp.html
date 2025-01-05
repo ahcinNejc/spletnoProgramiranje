@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Money tracking app page</title>
+        <link rel="stylesheet" href="mAppStyles.css">
+    </head>
+    <body>
+        <nav>
+            <a href="../../homePage.html">Home</a>
+            <a href="">Schedule</a>
+            <a href="moneyApp.html">Money tracking</a>
+            <a href="../qCards/qCards.html">Q Cards</a>
+        </nav>
+
+        <div class="main">
+            <div class="top-row" id="top-row">
+                <label id="spent-label">Spent:</label>
+                <label id="gained-label">Gained:</label>
+                <label id="total-label">Total:</label>
+            </div>
+            <div class="main-container" id="main-container">
+
+                <!-- Example of a expense container -->
+                <div class="expense-cont">
+                    <h2 class="title">Month</h2>
+                    <label>Spent: 100</label>
+                    <label>Gained: 200</label>
+                    <div class="buttons">
+                        <button onclick="openExpensesModal('month', 'spent')">Edit spent</button>
+                        <button onclick="openExpensesModal('month', 'gained')">Edit gained</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- Modal for editing expenses -->
+            <div class="modal-frame " id="expenses-modal">
+                <div class="modal-content" >
+                    <button onclick="closeExpensesModal()">x</button>
+                    <h2 id="modal-title">Edit expenses</h2>
+                    <label for="amount">Enter amount:</label>
+                    <input type="number" name="amount" id="amount">
+                    <div class="buttons">
+                        <button onclick="addAmount()">+ ADD</button>
+                        <button onclick="removeAmount()">- REMOVE</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    <script src="mAppScript.js"></script>
+</body>
+</html>
