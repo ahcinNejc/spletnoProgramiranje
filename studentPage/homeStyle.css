@@ -212,7 +212,7 @@ button:hover {
 }
 
 .img-container {
-    flex-shrink: 0; /* Prevent the container from shrinking */
+    flex-shrink: 1;
     width: 200px; 
     aspect-ratio: 1 / 1; 
     border-radius: 50%; 

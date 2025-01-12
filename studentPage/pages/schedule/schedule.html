@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Schedule page</title>
+        <link rel="stylesheet" href="scheduleStyle.css">
+    </head>
+    <body>
+        <nav>
+            <a href="../../homePage.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="../moneyApp/moneyApp.html">Money tracking</a>
+            <a href="../qCards/qCards.html">Q Cards</a>
+        </nav>
+
+        <div class="main">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="event-cell" id="monday">
+                            <div class="events">
+                                <div class="event">EventName: EventTime</div>
+                                <div class="event">EventName: EventTime</div>
+                            </div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="tuesday">
+                            <div class="events">
+                                <div class="event">EventName: EventTime</div>
+
+                            </div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="wednesday">
+                            <div class="events"></div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="thursday">
+                            <div class="events"></div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="friday">
+                            <div class="events"></div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="saturday">
+                            <div class="events"></div>
+                            <button class="add-event">+</button>
+                        </td>
+                        <td class="event-cell" id="sunday">
+                            <div class="events"></div>
+                            <button class="add-event">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+            <!-- Modal for adding events-->
+            <div class="modal-frame " id="event-modal">
+                <div class="modal-content" >
+                    <button onclick="closeEventModal()">x</button>
+                    <h2 id="modal-title">Add event for day</h2>
+                    <form id="event-form">
+                        <label for="event-title">Event Title:</label>
+                        <input type="text" id="event-title" name="event-title" required>
+                        <br><br>
+                        <label for="event-time">Event Time:</label>
+                        <input type="time" id="event-time" name="event-time" required>
+                        <br><br>
+                        <button type="submit">Add Event</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    <script src="scheduleScript.js"></script>
+</body>
+</html>
