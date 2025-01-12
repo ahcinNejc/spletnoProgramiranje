@@ -186,12 +186,18 @@ button:hover {
 }
 
 
+@media screen and (max-width: 500px) {
+    .text-overlay {
+        display: none;
+    }
+}
 
 
 /* Content cards styles */
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 1rem;

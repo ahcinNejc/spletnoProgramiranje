@@ -92,7 +92,7 @@ table{
     min-height: 80%;
     max-width: 80%;
     border-radius: 1rem;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     border-spacing: 0;
     overflow: hidden;
 }
@@ -111,12 +111,8 @@ tbody tr{
 
 }
 .event-cell{
-
     padding: 1rem;
     text-align: center;
-    border-radius: 1rem;
-    max-height: 10px;
-    /* width: 100%; */
 }
 .add-event {
     background-color: rgba(255, 255, 255, 0);
@@ -136,6 +132,7 @@ tbody tr{
 
 td{
     vertical-align: top;
+    border: 1px solid var(--primary-color);
 }
 
 
